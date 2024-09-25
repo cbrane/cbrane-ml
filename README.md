@@ -23,7 +23,31 @@ This notebook applies boosting techniques using XGBoost to classify email messag
 - **Model Explanation**: Utilizing LIME (Local Interpretable Model-agnostic Explanations) to interpret individual predictions by highlighting feature contributions.
 - **Visualization**: Creating confusion matrices and feature importance plots to gain insights into the model's decision-making and key predictive features.
 
+## MNIST Digit Classification
+This notebook trains a neural network to classify handwritten digits from the MNIST dataset. The workflow includes:
+
+- **Data Loading**: Importing the dataset from `mnist_train.csv` and `mnist_test.csv`.
+- **Data Visualization**: Plotting sample digits to understand the data.
+- **Data Preparation**: Normalizing pixel values, reshaping data, and converting labels to categorical format.
+- **Model Building**: Constructing a neural network using TensorFlow and Keras with the following architecture:
+  - Input layer (28x28x1)
+  - Flatten layer
+  - Dense layer with 15 neurons and ReLU activation
+  - Output layer with 10 neurons and softmax activation
+- **Model Training**: Training the model on the training data with validation split.
+- **Model Evaluation**: Evaluating the model's performance on the test set.
+- **Misclassification Analysis**: Visualizing misclassified digits to understand the model's errors.
+- **Confusion Matrix**: Generating and plotting a normalized confusion matrix to show the percentage accuracy for each class.
+
+Key improvements and additions:
+- Reshaped input data to include channel dimension (28x28x1)
+- Added a confusion matrix visualization for better performance analysis
+- Implemented a function to display misclassified digits
+
+The model achieves approximately 91.67% accuracy on the test set.
+
 ## References
 - [Moneypuck](https://moneypuck.com/data)
 - [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/)
 - [LIME Documentation](https://lime-ml.readthedocs.io/en/latest/)
+- [MNIST Dataset & Information](http://yann.lecun.com/exdb/mnist/)
